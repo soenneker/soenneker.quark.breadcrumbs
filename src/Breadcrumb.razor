@@ -1,0 +1,32 @@
+@using Soenneker.Quark.Enums.Colors
+@using Soenneker.Quark.OrderedLists
+@inherits Soenneker.Quark.Components.Element
+
+<nav aria-label="breadcrumb" @attributes="BuildAttributes()">
+    <OrderedList Class="breadcrumb">
+        @ChildContent
+    </OrderedList>
+</nav>
+
+@code {
+    [Parameter]
+    public Color Color { get; set; } = Color.Primary;
+
+    [Parameter]
+    public bool Large { get; set; }
+
+    protected override Dictionary<string, object> BuildAttributes()
+    {
+        Dictionary<string, object> attributes = base.BuildAttributes();
+
+        var baseClasses = "breadcrumb";
+
+        if (Large)
+            baseClasses = $"{baseClasses} breadcrumb-lg";
+
+        attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")
+            ?.ToString(), baseClasses);
+
+        return attributes;
+    }
+}
