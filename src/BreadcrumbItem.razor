@@ -1,6 +1,6 @@
-@using Soenneker.Quark.Enums.Colors
 @using Soenneker.Quark.ListItems
 @using Soenneker.Quark.Anchors
+@using Soenneker.Quark.Dtos.Colors
 @inherits Soenneker.Quark.Components.Element
 
 @if (!string.IsNullOrEmpty(To))
@@ -33,14 +33,14 @@ else
         Dictionary<string, object> attributes = base.BuildAttributes();
 
         var baseClasses = "breadcrumb-item";
+
         if (Active)
         {
             baseClasses = $"{baseClasses} active";
             attributes["aria-current"] = "page";
         }
 
-        attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")
-            ?.ToString(), baseClasses);
+        AppendToClassAttr(attributes, baseClasses);
 
         return attributes;
     }

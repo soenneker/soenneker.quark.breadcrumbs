@@ -1,4 +1,4 @@
-@using Soenneker.Quark.Enums.Colors
+@using Soenneker.Quark.Dtos.Colors
 @using Soenneker.Quark.OrderedLists
 @inherits Soenneker.Quark.Components.Element
 
@@ -24,8 +24,7 @@
         if (Large)
             baseClasses = $"{baseClasses} breadcrumb-lg";
 
-        attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")
-            ?.ToString(), baseClasses);
+        AppendToClassAttr(attributes, baseClasses);
 
         return attributes;
     }

@@ -1,4 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
         <TargetFrameworks>net9.0</TargetFrameworks>
@@ -32,8 +34,9 @@
         <LangVersion>latest</LangVersion>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>icon.png</PackageIcon>
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild></PropertyGroup>
-    
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
     <ItemGroup>
         <None Include="..\README.md" Pack="true" PackagePath="\" />
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
@@ -41,9 +44,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Quark.Enums.Colors" Version="3.0.1" />
-        <PackageReference Include="Soenneker.Quark.ListItems" Version="3.0.7" />
-        <PackageReference Include="Soenneker.Quark.OrderedLists" Version="3.0.8" />
-        <PackageReference Include="Soenneker.Quark.Anchors" Version="3.0.9" />
+        <PackageReference Include="Soenneker.Quark.ListItems" Version="3.0.9" />
+        <PackageReference Include="Soenneker.Quark.OrderedLists" Version="3.0.9" />
+        <PackageReference Include="Soenneker.Quark.Anchors" Version="3.0.10" />
     </ItemGroup>
 </Project>
