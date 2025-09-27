@@ -48,6 +48,6 @@
     <ItemGroup>
         <PackageReference Include="Soenneker.Quark.ListItems.Ordered" Version="3.0.1" />
         <PackageReference Include="Soenneker.Quark.OrderedLists" Version="3.0.25" />
-        <PackageReference Include="Soenneker.Quark.Anchors" Version="3.0.23" />
+        <PackageReference Include="Soenneker.Quark.Anchors" Version="3.0.24" />
     </ItemGroup>
 </Project>
