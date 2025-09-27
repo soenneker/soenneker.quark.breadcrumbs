@@ -1,18 +1,19 @@
+@using Soenneker.Extensions.String
 @inherits Soenneker.Quark.Element
 
-@if (!string.IsNullOrEmpty(To))
+@if (To.HasContent())
 {
-    <ListItem Class="breadcrumb-item">
+    <OrderedListItem Class="breadcrumb-item">
         <Anchor To="@To" @attributes="BuildAttributes()">
             @ChildContent
         </Anchor>
-    </ListItem>
+    </OrderedListItem>
 }
 else
 {
-    <ListItem @attributes="BuildAttributes()">
+    <OrderedListItem @attributes="BuildAttributes()">
         @ChildContent
-    </ListItem>
+    </OrderedListItem>
 }
 
 @code {

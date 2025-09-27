@@ -9,7 +9,6 @@ using Microsoft.JSInterop;
 using Serilog;
 using Serilog.Debugging;
 using Soenneker.Serilog.Sinks.Browser.Blazor.Registrars;
-using Soenneker.Quark;
 
 namespace Soenneker.Quark.Breadcrumbs.Demo;
 
@@ -32,7 +31,6 @@ public sealed class Program
             });
 
             builder.Services.AddEmptyThemeProviderAsScoped();
-
 
             WebAssemblyHost host = builder.Build();
 
